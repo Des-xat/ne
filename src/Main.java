@@ -6,46 +6,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        FileWriter fileWriter1 = new FileWriter("title.txt");
-        FileWriter fileWriter2 = new FileWriter("author.txt");
-        FileWriter fileWriter3 = new FileWriter("text.txt");
-        fileWriter1.write("Beggin");
-        fileWriter2.write("Боб Гаудио");
-        fileWriter3.write("Oooooh\n" +
-                "Put your loving hand hand out baby\n" +
-                "I'm beggin'\n" +
-                "Beggin', beggin' you" +
-                " Put your  loving hand out, baby\n" +
-                "Beggin', beggin' you " +
-                "Put yor loving hand out darlung \n" +
-                "Riding high, when I was king\n" +
-                "Played it hard and fast, 'cause I had everything\n" +
-                "But easy come and easy go\n" +
-                "And it would end\n");
+        FileWriter fileWriter1 = new FileWriter("Alf.txt");
+        fileWriter1.write("A a\n B b\n C c\n D d\nE e\n F f\n G g\n H h \n I i\n J j\nK k\n L l \n M m \nN n \n O o\n P p\nQ q\n R r\nS s\n T t\n U u\nV v\nW w\nX x\nY y\n Z z ");
+        fileWriter1.write("0\n1\n\n2\n3\n4\n5\n6\n7\n8\n9");
 
         fileWriter1.close();
-        fileWriter2.close();
-        fileWriter3.close();
-        FileReader reader1 = new FileReader("title.txt");
-        FileReader reader2 = new FileReader("author.txt");
-        FileReader reader3 = new FileReader("text.txt");
-        Scanner scanner1 = new Scanner(reader1);
-        Scanner scanner2 = new Scanner(reader2);
-        Scanner scanner3 = new Scanner(reader3);
+        FileReader fileReader1 = new FileReader("Alf.txt");
+        Scanner scanner = new Scanner(fileReader1);
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine());
 
-        while (scanner1.hasNextLine()) {
-            System.out.println(scanner1.nextLine());
-            while (scanner2.hasNextLine()) {
-                System.out.println(scanner2.nextLine());
-                while (scanner3.hasNextLine()) {
-                    System.out.println(scanner3.nextLine());
-                }
-            }
         }
-
-        reader1.close();
-        reader2.close();
-        reader3.close();
+        fileReader1.close();
 
     }
 }
